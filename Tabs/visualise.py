@@ -1,16 +1,15 @@
 import warnings
-import matplotlib.pyplot as plt 
-import seaborn as sns 
+import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.metrics import ConfusionMatrixDisplay
 from sklearn import tree
-import streamlit as st 
+import streamlit as st
 
 from web_functions import train_model
 
 def app(df, x, y):
-
+    # Mengabaikan semua peringatan
     warnings.filterwarnings('ignore')
-    st.set_option('deprecation.showPyplotGlobalUse', False)
 
     st.title("Visualisasi Prediksi")
 
@@ -24,7 +23,8 @@ def app(df, x, y):
         disp = ConfusionMatrixDisplay.from_estimator(
             model, x_numeric, y_numeric, cmap=plt.cm.Blues
         )
-        st.pyplot()
+        disp.plot()  # menampilkan plot confusion matrix
+        st.pyplot(plt.gcf())  # gunakan plt.gcf() untuk mendapatkan figure saat ini
 
     if st.checkbox("Plot Decision Tree"):
         model, score = train_model(x_numeric, y_numeric)
