@@ -40,16 +40,24 @@ def app(df, x, y):
         pe = st.text_input('Input Nilai pe')
         ane = st.text_input('Input Nilai ane')
 
-    # Masukkan fitur ke dalam list
+    # Masukkan fitur ke dalam list dan ubah ke tipe numerik
     features = [bp, sg, al, su, rbc, pc, pcc, ba, bgr, bu, sc, sod, pot, hemo, pcv, wc, rc, htn, dm, cad, appet, pe, ane]
+    numeric_features = []
+
+    for feature in features:
+        try:
+            # Konversi input menjadi float, ganti nilai kosong atau tidak valid dengan 0
+            numeric_features.append(float(feature) if feature.strip() else 0.0)
+        except ValueError:
+            numeric_features.append(0.0)  # Jika tidak bisa dikonversi, ganti dengan 0
 
     # Prediksi ketika tombol diklik
     if st.button("Prediksi"):
         if model_choice == "Decision Tree":
-            prediction, score = predict(x, y, features)
+            prediction, score = predict(x, y, numeric_features)
         elif model_choice == "Naive Bayes":
             model, score = train_naive_bayes(x, y)
-            prediction = model.predict([features])
+            prediction = model.predict([numeric_features])  # Pastikan numeric_features adalah 2D array
 
         st.info("Prediksi Sukses...")
 
@@ -59,3 +67,4 @@ def app(df, x, y):
             st.success("Orang tersebut relatif aman dari penyakit ginjal.")
 
         st.write("Model yang digunakan memiliki tingkat akurasi", (score * 100), "%")
+
