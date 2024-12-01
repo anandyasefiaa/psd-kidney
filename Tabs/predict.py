@@ -1,4 +1,9 @@
 import streamlit as st
+from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
 from web_functions import predict, train_model, train_naive_bayes
 
 def app(df, x, y):
