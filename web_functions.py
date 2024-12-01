@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
 import streamlit as st
 
 @st.cache()
@@ -13,6 +14,13 @@ def load_data():
     y = df[[ "classification" ]]
     
     return df, x, y
+
+@st.cache
+def train_naive_bayes(x, y):
+    model = GaussianNB()
+    model.fit(x, y.values.ravel())  # Naive Bayes membutuhkan y dalam format array 1D
+    score = model.score(x, y)
+    return model, score
 
 @st.cache
 def train_model(x,y):
