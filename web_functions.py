@@ -5,7 +5,7 @@ import streamlit as st
 
 @st.cache()
 def load_data():
-    df = pd.read_csv('kidney-disease.csv')
+    df = pd.read_csv('kidney_disease.csv')
 
     x = df[[ "bp", "sg", "al", "su", "rbc", "pc", "pcc", "ba", 
          "bgr", "bu", "sc", "sod", "pot", "hemo", "pcv", 
