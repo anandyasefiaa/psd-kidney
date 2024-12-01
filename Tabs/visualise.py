@@ -4,6 +4,7 @@ import seaborn as sns
 from sklearn.metrics import ConfusionMatrixDisplay
 from sklearn import tree
 import streamlit as st
+import pandas as pd
 
 from web_functions import train_model
 
