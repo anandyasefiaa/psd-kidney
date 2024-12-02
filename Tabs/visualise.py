@@ -12,7 +12,7 @@ def app(df, x, y):
     # Mengabaikan semua peringatan
     warnings.filterwarnings('ignore')
 
-    st.title("Visualisasi Prediksi")
+    st.title("Visualisasi Klasifikasi")
 
     # Konversi x dan y ke array numerik
     x_numeric = x.apply(pd.to_numeric, errors='coerce').fillna(0).to_numpy()
