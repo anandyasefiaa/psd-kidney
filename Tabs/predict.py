@@ -7,10 +7,10 @@ from sklearn.metrics import accuracy_score
 from web_functions import predict, train_model, train_naive_bayes
 
 def app(df, x, y):
-    st.title("Halaman Prediksi")
+    st.title("Halaman Klasifikasi")
 
-    # Pilihan metode prediksi
-    st.subheader("Pilih Metode Prediksi")
+    # Pilihan metode klasifikasi
+    st.subheader("Pilih Metode Klasifikasi")
     model_choice = st.selectbox("Metode", ["Decision Tree", "Naive Bayes"])
 
     # Input fitur
