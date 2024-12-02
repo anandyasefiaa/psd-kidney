@@ -18,8 +18,8 @@ def app(df, x, y):
 
     with col1:
         bp = st.text_input ('Input Nilai bp')
-        sg = st.text_input ('Input Nilai sg')
-        al = st.text_input ('Input Nilai al')
+        sg = st.text_input ('Input Nilai Specific Gravity')
+        al = st.text_input ('Input Nilai Albumin')
         su = st.text_input ('Input Nilai su')
         rbc = st.text_input ('Input Nilai rbc')
         pc = st.text_input ('Input Nilai pc')
@@ -27,19 +27,19 @@ def app(df, x, y):
         ba = st.text_input ('Input Nilai ba')
 
     with col2:
-        bgr = st.text_input ('Input Nilai bgr')
+        bgr = st.text_input ('Input Nilai Blood Glucose Random')
         bu = st.text_input ('Input Nilai bu')
         sc = st.text_input ('Input Nilai sc')
         sod = st.text_input ('Input Nilai sod')
         pot = st.text_input ('Input Nilai pot')
-        hemo = st.text_input ('Input Nilai hemo')
+        hemo = st.text_input ('Input Nilai Hemoglobin')
         pcv = st.text_input ('Input Nilai pcv') 
         wc = st.text_input ('Input Nilai wc')
 
     with col3:
         rc = st.text_input ('Input Nilai rc')
-        htn = st.text_input ('Input Nilai htn')
-        dm = st.text_input ('Input Nilai dm')
+        htn = st.text_input ('Input Nilai Hypertension')
+        dm = st.text_input ('Input Nilai Diabetes Mellitus')
         cad = st.text_input ('Input Nilai cad')
         appet = st.text_input ('Input Nilai appet')
         pe = st.text_input ('Input Nilai pe')
