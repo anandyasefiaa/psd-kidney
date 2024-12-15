@@ -17,24 +17,24 @@ def app(df, x, y):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        bp = st.text_input ('Input Nilai bp')
+        bp = st.text_input ('Input Nilai Blood Pressure')
         sg = st.text_input ('Input Nilai Specific Gravity')
         al = st.text_input ('Input Nilai Albumin')
-        su = st.text_input ('Input Nilai su')
-        rbc = st.text_input ('Input Nilai rbc')
-        pc = st.text_input ('Input Nilai pc')
-        pcc = st.text_input ('Input Nilai pcc')
-        ba = st.text_input ('Input Nilai ba')
+        su = st.text_input ('Input Nilai Sugar')
+        rbc = st.text_input ('Input Nilai Red Blood Cells')
+        pc = st.text_input ('Input Nilai Pus Cell')
+        pcc = st.text_input ('Input Nilai Pus Cell Clumps')
+        ba = st.text_input ('Input Nilai Bacteria')
 
     with col2:
         bgr = st.text_input ('Input Nilai Blood Glucose Random')
-        bu = st.text_input ('Input Nilai bu')
-        sc = st.text_input ('Input Nilai sc')
-        sod = st.text_input ('Input Nilai sod')
-        pot = st.text_input ('Input Nilai pot')
+        bu = st.text_input ('Input Nilai Blood Urea')
+        sc = st.text_input ('Input Nilai Serum Creatinine')
+        sod = st.text_input ('Input Nilai Sodium')
+        pot = st.text_input ('Input Nilai Potassium')
         hemo = st.text_input ('Input Nilai Hemoglobin')
-        pcv = st.text_input ('Input Nilai pcv') 
-        wc = st.text_input ('Input Nilai wc')
+        pcv = st.text_input ('Input Nilai Packed Cell Volume ') 
+        wc = st.text_input ('Input Nilai White Cell Count')
 
     with col3:
         rc = st.text_input ('Input Nilai rc')
