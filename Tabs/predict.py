@@ -67,8 +67,8 @@ def app(df, x, y):
         st.info("Klasifikasi Sukses...")
 
         if prediction == 1:
-            st.warning("Orang tersebut rentan terkena penyakit ginjal.")
+            st.warning("Orang tersebut bisa terkena penyakit ginjal.")
         else:
-            st.success("Orang tersebut relatif aman dari penyakit ginjal.")
+            st.success("Orang tersebut terhindar dari penyakit ginjal.")
 
         st.write("Model yang digunakan memiliki tingkat akurasi", (score * 100), "%")
