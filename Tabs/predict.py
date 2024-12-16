@@ -44,10 +44,9 @@ def app(df, x, y):
         appet = st.text_input ('Input Nilai Nafsu Makan')
         pe = st.text_input ('Input Nilai Edema pada kaki')
         ane = st.text_input ('Input Nilai anemia')
-        age = st.text_input('Input Usia')
 
     # Masukkan fitur ke dalam list dan ubah ke tipe numerik
-    features = [,bp,sg,al,su,rbc,pc,pcc,ba,bgr,bu,sc,sod,pot,hemo,pcv,wc,rc,htn,dm,cad,appet,pe,ane,age]
+    features = [,bp,sg,al,su,rbc,pc,pcc,ba,bgr,bu,sc,sod,pot,hemo,pcv,wc,rc,htn,dm,cad,appet,pe,ane]
     numeric_features = []
 
     for feature in features:
