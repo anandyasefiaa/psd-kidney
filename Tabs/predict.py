@@ -46,7 +46,7 @@ def app(df, x, y):
         ane = st.text_input ('Input Nilai anemia')
 
     # Masukkan fitur ke dalam list dan ubah ke tipe numerik
-    features = [,bp,sg,al,su,rbc,pc,pcc,ba,bgr,bu,sc,sod,pot,hemo,pcv,wc,rc,htn,dm,cad,appet,pe,ane]
+    features = [bp,sg,al,su,rbc,pc,pcc,ba,bgr,bu,sc,sod,pot,hemo,pcv,wc,rc,htn,dm,cad,appet,pe,ane]
     numeric_features = []
 
     for feature in features:
